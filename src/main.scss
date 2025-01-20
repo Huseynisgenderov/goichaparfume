@@ -1,10 +1,13 @@
+html {
+  scroll-behavior: smooth;
+}
 // Variables
 $primary-color: #1a1a1a;
 $secondary-color: #9a8478;
 $text-color: #333;
 $light-color: #fff;
-$font-primary: 'Playfair Display', serif;
-$font-secondary: 'Montserrat', sans-serif;
+$font-primary: "Playfair Display", serif;
+$font-secondary: "Montserrat", sans-serif;
 
 // Breakpoints
 $mobile: 768px;
@@ -75,7 +78,7 @@ body {
       flex-direction: column;
       justify-content: center;
       transition: right 0.3s ease;
-      
+
       &.active {
         right: 0;
       }
@@ -85,20 +88,20 @@ body {
   &__links {
     display: flex;
     gap: 2rem;
-    
+
     @include mobile {
       flex-direction: column;
       text-align: center;
       gap: 1.5rem;
       margin-bottom: 2rem;
     }
-    
+
     a {
       color: $primary-color;
       text-decoration: none;
       font-size: 1rem;
       transition: color 0.3s ease;
-      
+
       &:hover {
         color: $secondary-color;
       }
@@ -165,7 +168,7 @@ body {
   }
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -449,7 +452,7 @@ body {
   position: fixed;
   bottom: 2rem;
   right: 2rem;
-  background: #25D366;
+  background: #25d366;
   color: $light-color;
   width: 60px;
   height: 60px;

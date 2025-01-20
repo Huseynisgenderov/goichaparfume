@@ -141,9 +141,9 @@ function App() {
         </div>
         <div className={`navbar__right ${showMobileMenu ? "active" : ""}`}>
           <div className="navbar__links">
-            <Link to="#about">{t.about}</Link>
-            <Link to="#products">{t.products}</Link>
-            <Link to="#history">{t.history}</Link>
+            <a href="#about">{t.about}</a>
+            <a href="#products">{t.products}</a>
+            <a href="#history">{t.history}</a>
           </div>
           <div className="navbar__language">
             <select
