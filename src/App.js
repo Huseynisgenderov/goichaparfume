@@ -128,7 +128,7 @@ function App() {
   return (
     <div className="app">
       <nav className="navbar">
-        <Link href="#" className="navbar__brand">
+        <Link to="/" className="navbar__brand">
           GOICHA
         </Link>
         <div
@@ -141,9 +141,9 @@ function App() {
         </div>
         <div className={`navbar__right ${showMobileMenu ? "active" : ""}`}>
           <div className="navbar__links">
-            <Link href="#about">{t.about}</Link>
-            <Link href="#products">{t.products}</Link>
-            <Link href="#history">{t.history}</Link>
+            <Link to="#about">{t.about}</Link>
+            <Link to="#products">{t.products}</Link>
+            <Link to="#history">{t.history}</Link>
           </div>
           <div className="navbar__language">
             <select
@@ -265,7 +265,7 @@ function App() {
                 </Link>
               </li>
               <li>
-                <Link href="mailto:infogoicha@gmail.com">
+                <Link to="mailto:infogoicha@gmail.com">
                   <Mail size={16} /> infogoicha@gmail.com
                 </Link>
               </li>
@@ -275,17 +275,17 @@ function App() {
             <h3>Follow Us</h3>
             <ul>
               <li>
-                <Link href="https://www.instagram.com/goichaparfumes/">
+                <Link to="https://www.instagram.com/goichaparfumes/">
                   <Instagram size={16} /> Instagram
                 </Link>
               </li>
               <li>
-                <Link href="https://www.facebook.com/profile.php?id=61572309451527">
+                <Link to="https://www.facebook.com/profile.php?id=61572309451527">
                   <Facebook size={16} /> Facebook
                 </Link>
               </li>
               <li>
-                <Link href="#">
+                <Link to="/">
                   <Twitter size={16} /> Twitter
                 </Link>
               </li>
@@ -295,13 +295,13 @@ function App() {
             <h3>Legal</h3>
             <ul>
               <li>
-                <Link href="#">Privacy Policy</Link>
+                <Link to="/">Privacy Policy</Link>
               </li>
               <li>
-                <Link href="#">Terms of Service</Link>
+                <Link to="/">Terms of Service</Link>
               </li>
               <li>
-                <Link href="#">Shipping Info</Link>
+                <Link to="/">Shipping Info</Link>
               </li>
             </ul>
           </div>
@@ -325,7 +325,7 @@ function App() {
             {contacts.map((contact, index) => (
               <li key={index}>
                 <Link
-                  href={`https://wa.me/${contact.phone.replace(/\s+/g, "")}`}
+                  to={`https://wa.me/${contact.phone.replace(/\s+/g, "")}`}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
