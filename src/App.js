@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import {
   Instagram,
   Facebook,
@@ -127,9 +128,9 @@ function App() {
   return (
     <div className="app">
       <nav className="navbar">
-        <a href="#" className="navbar__brand">
+        <Link href="#" className="navbar__brand">
           GOICHA
-        </a>
+        </Link>
         <div
           className="navbar__mobile-toggle"
           onClick={() => setShowMobileMenu(!showMobileMenu)}
@@ -140,9 +141,9 @@ function App() {
         </div>
         <div className={`navbar__right ${showMobileMenu ? "active" : ""}`}>
           <div className="navbar__links">
-            <a href="#about">{t.about}</a>
-            <a href="#products">{t.products}</a>
-            <a href="#history">{t.history}</a>
+            <Link href="#about">{t.about}</Link>
+            <Link href="#products">{t.products}</Link>
+            <Link href="#history">{t.history}</Link>
           </div>
           <div className="navbar__language">
             <select
@@ -259,14 +260,14 @@ function App() {
                 <MapPin size={16} /> 123 Luxury Ave, Paris
               </li>
               <li>
-                <a href="https://wa.link/pbm13b">
+                <Link href="https://wa.link/pbm13b">
                   <Phone size={16} /> +994 55 492 37 05
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="mailto:infogoicha@gmail.com">
+                <Link href="mailto:infogoicha@gmail.com">
                   <Mail size={16} /> infogoicha@gmail.com
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -274,19 +275,19 @@ function App() {
             <h3>Follow Us</h3>
             <ul>
               <li>
-                <a href="https://www.instagram.com/goichaparfumes/">
+                <Link href="https://www.instagram.com/goichaparfumes/">
                   <Instagram size={16} /> Instagram
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="https://www.facebook.com/profile.php?id=61572309451527">
+                <Link href="https://www.facebook.com/profile.php?id=61572309451527">
                   <Facebook size={16} /> Facebook
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#">
+                <Link href="#">
                   <Twitter size={16} /> Twitter
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -294,13 +295,13 @@ function App() {
             <h3>Legal</h3>
             <ul>
               <li>
-                <a href="#">Privacy Policy</a>
+                <Link href="#">Privacy Policy</Link>
               </li>
               <li>
-                <a href="#">Terms of Service</a>
+                <Link href="#">Terms of Service</Link>
               </li>
               <li>
-                <a href="#">Shipping Info</a>
+                <Link href="#">Shipping Info</Link>
               </li>
             </ul>
           </div>
@@ -323,7 +324,7 @@ function App() {
           <ul className="contact-list">
             {contacts.map((contact, index) => (
               <li key={index}>
-                <a
+                <Link
                   href={`https://wa.me/${contact.phone.replace(/\s+/g, "")}`}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -333,7 +334,7 @@ function App() {
                     <strong>{contact.name}</strong>
                     <p>{contact.title}</p>
                   </div>
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
